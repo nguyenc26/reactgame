@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "name": "Totodile",
+    "image": "https://cdn.bulbagarden.net/upload/thumb/d/df/158Totodile.png/1200px-158Totodile.png"
+  },
+  {
+    "id": 2,
+    "name": "Cyndaquil",
+    "image": "https://cdn.bulbagarden.net/upload/thumb/9/9b/155Cyndaquil.png/1200px-155Cyndaquil.png"
+  },
+  {
+    "id": 3,
+    "name": "Chikorita",
+    "image": "https://cdn.bulbagarden.net/upload/thumb/b/bf/152Chikorita.png/1200px-152Chikorita.png"
+  },
+  {
+    "id": 4,
+    "name": "Treecko",
+    "image": "https://cdn.bulbagarden.net/upload/2/2c/252Treecko.png"
+  },
+  {
+    "id": 5,
+    "name": "Torchic",
+    "image": "https://cdn.bulbagarden.net/upload/9/91/255Torchic.png"
+  },
+  {
+    "id": 6,
+    "name": "Mudkip",
+    "image": "https://cdn.bulbagarden.net/upload/6/60/258Mudkip.png"
+  },
+  {
+    "id": 7,
+    "name": "Grookey",
+    "image": "https://cdn.bulbagarden.net/upload/thumb/9/93/810Grookey.png/1200px-810Grookey.png"
+  },
+  {
+    "id": 8,
+    "name": "Scorbunny",
+    "image": "https://cdn.bulbagarden.net/upload/thumb/0/06/813Scorbunny.png/1200px-813Scorbunny.png"
+  },
+  {
+    "id": 9,
+    "name": "Sobble",
+    "image": "https://cdn.bulbagarden.net/upload/thumb/9/9b/816Sobble.png/1200px-816Sobble.png"
+  },
+  {
+    "id": 10,
+    "name": "Rowlet",
+    "image": "https://cdn.bulbagarden.net/upload/thumb/7/74/722Rowlet.png/1200px-722Rowlet.png"
+  },
+  {
+    "id": 11,
+    "name": "Litten",
+    "image": "https://cdn.bulbagarden.net/upload/thumb/0/0e/725Litten.png/1200px-725Litten.png"
+  },
+  {
+    "id": 12,
+    "name": "Popplio",
+    "image": "https://cdn.bulbagarden.net/upload/thumb/d/d8/728Popplio.png/1200px-728Popplio.png"
+  }
+]
+
