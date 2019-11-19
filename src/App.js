@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import FriendCard from "./components/FriendCard";
-import Wrapper from "./components/Wrapper";
 import friends from "./friends.json";
+import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
 import Info from "./components/Info";
+import Footer from "./components/Footer";
 
+// import FriendContainer from "./components/FriendContainer";
+import FriendCard from "./components/FriendCard";
 
 
 
@@ -21,21 +23,17 @@ class App extends Component {
       <Wrapper>
         <Navbar></Navbar>
         <Info />
-        {this.state.friends.map(friend => (
-          <FriendCard
-            id={friend.id}
-            key={friend.id}
-            image={friend.image}
-          />
-        ))}
+        <div className="row">
+          {this.state.friends.map(friend => (
+            <FriendCard
+              id={friend.id}
+              key={friend.id}
+              image={friend.image}
+            />
+          ))}
+        </div>
+        <Footer></Footer>
       </Wrapper>
-
-
-
-
-
-
-
     );
   }
 }

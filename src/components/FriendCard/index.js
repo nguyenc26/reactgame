@@ -3,18 +3,13 @@ import "./style.css";
 
 function FriendCard(props) {
   return (
-    
-      <div className="img-container hover14">
-        <img
-          className="img"
-          alt={props.name}
-          src={props.image}
-        />
+    <div className="" onClick={() => {
+      props.handleClick(props.id)
+    }} clicked={props.clicked}>
+      <div className="img-container">
+        <img alt={props.name} src={props.image} />
       </div>
-
-   
-
-
+    </div>
   );
 }
 
