@@ -19,6 +19,9 @@ class App extends Component {
     guess: "Click an image to start"
   };
 
+  //have functions in here and call them here
+  
+
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
@@ -34,9 +37,6 @@ class App extends Component {
               id={friend.id}
               key={friend.id}
               image={friend.image}
-              shakeClass={this.state.shakeClass}
-              onCorrect={() => { this.correct() }}
-              onIncorrect={() => { this.incorrect() }}
             />
           ))}
         </div>

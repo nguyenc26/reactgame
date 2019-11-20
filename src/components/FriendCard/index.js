@@ -3,10 +3,10 @@ import "./style.css";
 
 function FriendCard(props) {
   return (
-    <div className="" onClick={() => {
+    <div className="col-md-3-offset-1 ml-4 pb-4" onClick={() => {
       props.handleClick(props.id)
     }} clicked={props.clicked}>
-      <div className="img-container">
+      <div className="img-container" id={props.id} key={props.id}>
         <img alt={props.name} src={props.image} />
       </div>
     </div>
