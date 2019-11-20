@@ -56,15 +56,18 @@ class App extends Component {
           topScore={this.state.topScore}
           textClass={this.state.textClass}>{this.state.guess}</Navbar>
         <Info />
-        <div className="row">
-          {this.state.shuffleArr.map(friend => (
-            <FriendCard
-              id={friend.id}
-              key={friend.id}
-              image={friend.image}
-            />
-          ))}
+        <div className="container text-center">
+          <div className="row">
+            {this.state.shuffleArr.map(friend => (
+              <FriendCard
+                id={friend.id}
+                key={friend.id}
+                image={friend.image}
+              />
+            ))}
+          </div>
         </div>
+
         <Footer></Footer>
       </Wrapper>
     );
