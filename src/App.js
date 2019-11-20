@@ -16,11 +16,36 @@ class App extends Component {
     score: 0,
     topScore: 0,
     textClass: "",
-    guess: "Click an image to start"
+    guess: "Click an image to start",
+    shuffleArr: []
   };
 
   //have functions in here and call them here
-  
+  componentDidMount() {
+    this.shuffle();
+  }
+
+  shuffleArr = arr => {
+    return arr.sort(() => Math.random() - 0.5);
+  }
+
+  shuffle() {
+    this.setState({ shuffleArr: this.shuffleArr(this.state.friends) });
+  }
+
+  checkGuess = (friendID) => {
+    this.shuffle();
+    if (this.state.guessed.has(friendID)) {
+      this.setState({ guessed: new Set() }, () => {
+        this.props.onIncorrect();
+      });
+
+      return
+    }
+    this.state.guessed.add(friendID);
+
+    this.props.onCorrect();
+  }
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
@@ -32,7 +57,7 @@ class App extends Component {
           textClass={this.state.textClass}>{this.state.guess}</Navbar>
         <Info />
         <div className="row">
-          {this.state.friends.map(friend => (
+          {this.state.shuffleArr.map(friend => (
             <FriendCard
               id={friend.id}
               key={friend.id}
