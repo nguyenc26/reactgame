@@ -15,9 +15,9 @@ class App extends Component {
     friends,
     score: 0,
     topScore: 0,
-    textClass: "",
     guess: "Click an image to start",
-    shuffleArr: []
+    shuffleArr: [],
+    guessed: new Set()
   };
 
   //have functions in here and call them here
@@ -37,14 +37,22 @@ class App extends Component {
     this.shuffle();
     if (this.state.guessed.has(friendID)) {
       this.setState({ guessed: new Set() }, () => {
-        this.props.onIncorrect();
+
+        this.setState({ score: 0, guess: "Wrong guess! Start over!" });
+
       });
 
       return
     }
     this.state.guessed.add(friendID);
 
-    this.props.onCorrect();
+    let score = this.state.score++;
+
+    if (score > this.state.topScore) {
+      this.setState({ score: score, topScore: score, guess: "High Score! Keep going!" });
+    } else {
+      this.setState({ score: score, guess: "Correct!" });
+    }
   }
 
   // Map over this.state.friends and render a FriendCard component for each friend object
@@ -54,7 +62,7 @@ class App extends Component {
         <Navbar
           score={this.state.score}
           topScore={this.state.topScore}
-          textClass={this.state.textClass}>{this.state.guess}</Navbar>
+        >{this.state.guess}</Navbar>
         <Info />
         <div className="container text-center">
           <div className="row">
@@ -63,6 +71,9 @@ class App extends Component {
                 id={friend.id}
                 key={friend.id}
                 image={friend.image}
+                handleClick={this.checkGuess}
+                onCorrect={() => { this.correct() }}
+                onIncorrect={() => { this.incorrect() }}
               />
             ))}
           </div>
