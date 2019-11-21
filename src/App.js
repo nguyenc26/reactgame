@@ -37,15 +37,12 @@ class App extends Component {
     this.shuffle();
     if (this.state.guessed.has(friendID)) {
       this.setState({ guessed: new Set() }, () => {
-
         this.setState({ score: 0, guess: "Wrong guess! Start over!" });
-
       });
 
       return
     }
     this.state.guessed.add(friendID);
-
     let score = this.state.score++;
 
     if (score > this.state.topScore) {
