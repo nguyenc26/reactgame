@@ -69,8 +69,6 @@ class App extends Component {
                 key={friend.id}
                 image={friend.image}
                 handleClick={this.checkGuess}
-                onCorrect={() => { this.correct() }}
-                onIncorrect={() => { this.incorrect() }}
               />
             ))}
           </div>
