@@ -43,7 +43,7 @@ class App extends Component {
       return
     }
     this.state.guessed.add(friendID);
-    let score = this.state.score++;
+    let score = this.state.score +1;
 
     if (score > this.state.topScore) {
       this.setState({ score: score, topScore: score, guess: "High Score! Keep going!" });
